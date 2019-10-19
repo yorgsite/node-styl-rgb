@@ -2,6 +2,13 @@
 simple bash console rgb syling. like [node-styl](https://www.npmjs.com/package/node-styl)
  for 256 and 16m color terminals.
 
+ Install :
+
+ ```
+ npm install node-styl-rgb
+ ```
+
+
 Add colors and styles to your logs :
 ```javascript
 var styl = require('node-styl-rgb').c16m;
