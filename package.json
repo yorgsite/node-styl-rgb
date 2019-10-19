@@ -1,0 +1,29 @@
+{
+  "name": "node-styl-rgb",
+  "version": "0.0.1",
+  "description": "simple bash console rgb syling",
+  "main": "styl-rgb.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yorgsite/node-styl-rgb.git"
+  },
+  "keywords": [
+    "console",
+    "bash",
+    "javascript",
+    "color",
+    "styling",
+    "rgb",
+    "256",
+    "16m"
+  ],
+  "author": "yorg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yorgsite/node-styl-rgb/issues"
+  },
+  "homepage": "https://github.com/yorgsite/node-styl-rgb#readme"
+}

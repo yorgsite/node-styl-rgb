@@ -1,5 +1,6 @@
 
 
+// ------- datas ------------
 
 
 var stylRef={
@@ -28,6 +29,10 @@ types['c16m']={
 };
 
 // ------- rendering ------------
+
+var _none=function(txt){
+	return txt.split(/\x1B\[[0-9;]*m/).join('');
+};
 
 var Renderer=function(type,data){
 	this.type=type;
@@ -66,7 +71,7 @@ var Renderers=new function(){
 	}
 }();
 
-// ------- interface ------------
+// ------- style interface ------------
 
 var Styl=function(rd,txt){
 	let sk={},col={front:0,back:0};
@@ -101,17 +106,23 @@ var Styl=function(rd,txt){
 	};
 };
 
-//----------
+//---------- public interface
 
 var rgbstyl=function(txt){
 	return rgbstyl.c256(txt);
 };
+rgbstyl.none=_none;
+
 rgbstyl.c256=function(txt){
 	return new Styl(Renderers['c256'],txt);
 };
+rgbstyl.c256.none=_none;
+
 rgbstyl.c16m=function(txt){
 	return new Styl(Renderers['c16m'],txt);
 };
+rgbstyl.c16m.none=_none;
+
 
 
 module.exports = rgbstyl;
