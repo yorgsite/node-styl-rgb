@@ -1,6 +1,6 @@
 {
   "name": "node-styl-rgb",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "simple bash console rgb syling",
   "main": "styl-rgb.js",
   "scripts": {
