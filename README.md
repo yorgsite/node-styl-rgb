@@ -11,7 +11,7 @@ simple bash console rgb syling. like [node-styl](https://www.npmjs.com/package/n
 
 Add colors and styles to your logs :
 ```javascript
-var styl = require('node-styl-rgb').c16m;
+const styl = require('node-styl-rgb').c16m;
 ...
 console.log("_"+styl('hello').front([80,255,0]).back([30,0,120]).underline);
 
@@ -38,11 +38,11 @@ console.log("this is "+title(" AN OTHER TITLE "));
 	* c16m : 16M colors. ```require('node-styl-rgb').c16m ```
 
 ```javascript
-var styl = require('node-styl-rgb');
+const styl = require('node-styl-rgb');
 ```
 is equivalent to
 ```javascript
-var styl = require('node-styl-rgb').c256;
+const styl = require('node-styl-rgb').c256;
 ```
 
 **available style properties are :**
