@@ -15,7 +15,7 @@ const { styl } = require('node-styl-rgb');
 // or
 import styl from 'node-styl-rgb';
 ...
-console.log("_"+styl('hello').front([80,255,0]).back([30,0,120]).underline);
+console.log(""+styl('hello').front([80,255,0]).back([30,0,120]).underline);
 
 ```
 
@@ -95,59 +95,72 @@ const { c16m } = require('node-styl-rgb');
 ## Exemples
 
 ### Exemple 1
+Base use exemple : simple title.
+```javascript
+console.log("-".repeat(10) + "|" + styl("node-styl demo").green.bold + "|" + "-".repeat(10));
+```
 
+### Exemple 2
+Recursive styling.
 ```javascript
 console.log('' 
-	+ styl('test1 ' + styl('custom ').front('#08f')
-	+ styl('green ').back([100, 255, 50]).black
-	+ styl(' cyan ').cyan.italic.bold
-	+ styl('un' + styl('der').red + 'line').u).green + ' ');
+    + styl('test1 ' + styl('custom ').front('#08f')
+    + styl('green ').back([100, 255, 50]).black
+    + styl(' cyan ').cyan.italic.bold
+    + styl('un' + styl('der').red + 'line').u).green + ' ');
 ```
 ![image info](./imgs/exemple0.png)
 
-### Exemple 2
+
+## Exemples with **parse**
+
+### Exemple 3
+Use **parse** to make simple linear gradient.
 ```javascript
 console.log(
-	styl('gradient ' + styl('underlined').u + ' text')
-		.gradient(obj => obj.styl
-			.back([255 * obj.colP, 0, 0])
-			.front([255, 255 * obj.colP, 255])
-		)
-	+ '');
+    styl('gradient ' + styl('underlined').u + ' text')
+        .gradient(obj => obj.styl
+            .back([255 * obj.colP, 0, 0])
+            .front([255, 255 * obj.colP, 255])
+        )
+    + '');
 ```
 
 ![image info](./imgs/exemple1.png)
 
 
-### Exemple 3
+### Exemple 4
+Use **parse** to make 2d linear gradient.
 ```javascript
 console.log(
-	styl("gradient displayed\non multiple\nrows with some\n2d variations").gradient(obj => {
-		obj.styl.front([255 * (1 - obj.colP), 255 * obj.colP, 255 * obj.rowP]);
-	}) + ""
+    styl("gradient displayed\non multiple\nrows with some\n2d variations").gradient(obj => {
+        obj.styl.front([255 * (1 - obj.colP), 255 * obj.colP, 255 * obj.rowP]);
+    }) + ""
 );
 ```
 ![image info](./imgs/exemple2.png)
 
 
 ### Exemple 4
+Use **parse** to draw a box.
 ```javascript
+console.log("* box :");
 console.log(
-	styl(
-		[
-			"+---------------+",
-			"|               |",
-			"|  " + styl(`checkerboard`).bold + " |",
-			"|     in a      |",
-			"|      box      |",
-			"|               |",
-			"+---------------+",
-		].join("\n")
-	).gradient(obj => {
-		if ("+-|".includes(obj.char)) {
-			obj.styl.back([255 * obj.colP, 255 * obj.rowP, 255 * (1 - obj.colP * obj.rowP)]).hidden;
-		} else if ((obj.col + obj.row) % 2) obj.styl.back("#444");
-	}) + ""
+    styl(
+        [
+            "+---------------+",
+            "|               |",
+            "|  " + styl(`checkerboard`).bold + " |",
+            "|     in a      |",
+            "|      box      |",
+            "|               |",
+            "+---------------+",
+        ].join("\n")
+    ).gradient(obj => {
+        if ("+-|".includes(obj.char)) {
+            obj.styl.back([255 * obj.colP, 255 * obj.rowP, 255 * (1 - obj.colP * obj.rowP)]).hidden;
+        } else if (Math.round(obj.col * 0.5 + obj.row) % 2) obj.styl.back("#444");
+    }) + ""
 );
 ```
 ![image info](./imgs/exemple3.png)
