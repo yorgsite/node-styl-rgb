@@ -36,9 +36,9 @@ console.log("this is "+title(" AN OTHER TITLE "));
  ```
 
 
-**available rgb displays are :**
 styl will detect automaticly if your terminal handles true colors.
 You can force rgb type by importing it instead of styl.
+**available rgb displays are :**
 * **types :**
 	* c256 : 256 colors. ```require('node-styl-rgb').c256 ```
 	* c16m : 16M colors. ```require('node-styl-rgb').c16m ```
