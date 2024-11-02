@@ -77,7 +77,7 @@ export declare class Styl {
      * Sets a new content
      * @param text
      */
-    string(text: string): this;
+    string(text: string): Styl;
     /**
      * Parses string characters keeping trac of relatve position
      * @param callback

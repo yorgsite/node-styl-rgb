@@ -150,7 +150,7 @@ export class Styl {
 	 * Sets a new content
 	 * @param text
 	 */
-	string(text: string) {
+	string(text: string): Styl {
 		this.contents = text;
 		return this;
 	}
@@ -160,7 +160,7 @@ export class Styl {
 	 * @param callback
 	 * @returns
 	 */
-	parse(callback: (v: ParseCallbackDataType) => void) {
+	parse(callback: (v: ParseCallbackDataType) => void): string {
 		const cr = this.contents.includes("\r\n") ? "\r\n" : "\n";
 		const wlist = Styl.none(this.contents)
 			.split(cr)

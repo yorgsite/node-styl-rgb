@@ -134,7 +134,7 @@ style(value: string | string[]): Styl
 Sets a new content
 @param text
 */
-string(text: string)
+string(text: string): Styl
 ```
 #### <a name="method_parse"></a> **parse** : parse contents characters
 ```javascript
@@ -143,7 +143,7 @@ Parses string characters keeping trac of relatve position
 @param callback
 @returns
 */
-parse(callback: (v: ParseCallbackDataType) => void)
+parse(callback: (v: ParseCallbackDataType) => void): string
 ```
 
 <!-- ] methods -->
