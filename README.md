@@ -16,8 +16,9 @@ const { styl } = require('node-styl-rgb');
 import styl from 'node-styl-rgb';
 ...
 console.log(""+styl('hello').front([80,255,0]).back([30,0,120]).underline);
-
 ```
+[exemples](#exemples)
+
 
  Use preformated style with the property **theme** :
 ```javascript
@@ -144,7 +145,9 @@ parse(callback: (v: ParseCallbackDataType) => void): string
 ```
 
 <!-- ] methods -->
-## Exemples
+## Exemples<a name="exemples"></a>
+
+Use the command **styl.demo();** to render these exemples.
 
 ### Exemple 1
 Base use exemple : simple title.
