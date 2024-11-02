@@ -119,7 +119,7 @@ Use **parse** to make simple linear gradient.
 ```javascript
 console.log(
     styl('gradient ' + styl('underlined').u + ' text')
-        .gradient(obj => obj.styl
+        .parse(obj => obj.styl
             .back([255 * obj.colP, 0, 0])
             .front([255, 255 * obj.colP, 255])
         )
@@ -133,7 +133,7 @@ console.log(
 Use **parse** to make 2d linear gradient.
 ```javascript
 console.log(
-    styl("gradient displayed\non multiple\nrows with some\n2d variations").gradient(obj => {
+    styl("gradient displayed\non multiple\nrows with some\n2d variations").parse(obj => {
         obj.styl.front([255 * (1 - obj.colP), 255 * obj.colP, 255 * obj.rowP]);
     }) + ""
 );
@@ -156,7 +156,7 @@ console.log(
             "|               |",
             "+---------------+",
         ].join("\n")
-    ).gradient(obj => {
+    ).parse(obj => {
         if ("+-|".includes(obj.char)) {
             obj.styl.back([255 * obj.colP, 255 * obj.rowP, 255 * (1 - obj.colP * obj.rowP)]).hidden;
         } else if (Math.round(obj.col * 0.5 + obj.row) % 2) obj.styl.back("#444");

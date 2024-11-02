@@ -25,13 +25,13 @@ var StylDemo = /** @class */ (function () {
             },
             function (styl) {
                 console.log("* Horizontal gradient :");
-                console.log(styl("gradient " + styl("underlined").underline + " text").gradient(function (obj) {
+                console.log(styl("gradient " + styl("underlined").underline + " text").parse(function (obj) {
                     return obj.styl.back([255 * obj.colP, 0, 0]).front([255, 255 * obj.colP, 255]);
                 }) + "");
             },
             function (styl) {
                 console.log("* 2d gradient :");
-                console.log(styl("gradient displayed\non multiple\nrows with some\n2d variations").gradient(function (obj) {
+                console.log(styl("gradient displayed\non multiple\nrows with some\n2d variations").parse(function (obj) {
                     obj.styl.front([255 * (1 - obj.colP), 255 * obj.colP, 255 * obj.rowP]);
                 }) + "");
             },
@@ -45,7 +45,7 @@ var StylDemo = /** @class */ (function () {
                     "|      box      |",
                     "|               |",
                     "+---------------+",
-                ].join("\n")).gradient(function (obj) {
+                ].join("\n")).parse(function (obj) {
                     if ("+-|".includes(obj.char)) {
                         obj.styl.back([255 * obj.colP, 255 * obj.rowP, 255 * (1 - obj.colP * obj.rowP)]).hidden;
                     }

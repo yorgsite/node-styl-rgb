@@ -73,7 +73,7 @@ export declare class Styl {
      * @param callback
      * @returns
      */
-    gradient(callback: (v: ParseCallbackDataType) => void): string;
+    parse(callback: (v: ParseCallbackDataType) => void): string;
     toString(): string;
     get b(): Styl;
     get bold(): Styl;

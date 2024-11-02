@@ -149,7 +149,7 @@ var Styl = /** @class */ (function () {
      * @param callback
      * @returns
      */
-    Styl.prototype.gradient = function (callback) {
+    Styl.prototype.parse = function (callback) {
         var _this = this;
         var cr = this.contents.includes("\r\n") ? "\r\n" : "\n";
         var wlist = Styl.none(this.contents)

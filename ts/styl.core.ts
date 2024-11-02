@@ -151,7 +151,7 @@ export class Styl {
 	 * @param callback
 	 * @returns
 	 */
-	gradient(callback: (v: ParseCallbackDataType) => void) {
+	parse(callback: (v: ParseCallbackDataType) => void) {
 		const cr = this.contents.includes("\r\n") ? "\r\n" : "\n";
 		const wlist = Styl.none(this.contents)
 			.split(cr)
