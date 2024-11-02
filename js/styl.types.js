@@ -1,0 +1,60 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HLColorsKeys = exports.HLBackColorKeys = exports.HLColorKeys = exports.HLStyleKeys = void 0;
+exports.HLStyleKeys = [
+    "bold",
+    "b",
+    // "dim",
+    // "d",
+    "italic",
+    "i",
+    "underline",
+    "u",
+    "inverse",
+    "blink",
+    "hidden",
+    "strikethrough",
+    "s",
+];
+exports.HLColorKeys = [
+    "white",
+    "grey",
+    "black",
+    "blue",
+    "cyan",
+    "green",
+    "magenta",
+    "red",
+    "yellow",
+];
+exports.HLBackColorKeys = [
+    "whiteBG",
+    "greyBG",
+    "blackBG",
+    "blueBG",
+    "cyanBG",
+    "greenBG",
+    "magentaBG",
+    "redBG",
+    "yellowBG",
+];
+exports.HLColorsKeys = [
+    "white",
+    "grey",
+    "black",
+    "blue",
+    "cyan",
+    "green",
+    "magenta",
+    "red",
+    "yellow",
+    "whiteBG",
+    "greyBG",
+    "blackBG",
+    "blueBG",
+    "cyanBG",
+    "greenBG",
+    "magentaBG",
+    "redBG",
+    "yellowBG",
+];

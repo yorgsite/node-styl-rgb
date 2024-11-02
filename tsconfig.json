@@ -1,0 +1,22 @@
+{
+	"compilerOptions": {
+		"skipLibCheck": true,
+		"outDir": "./js/",
+		"noImplicitAny": true,
+		"module": "CommonJS",
+		"target": "es5",
+		"allowJs": true,
+		"moduleResolution": "node",
+		"declaration": true,
+		"declarationDir": "./types",
+		"removeComments": false,
+		"declarationMap": true,
+		"esModuleInterop": true
+	},
+	"include": [
+		"./ts/**/*"
+	],
+	"exclude": [
+		"node_modules"
+	]
+}
