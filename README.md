@@ -34,18 +34,15 @@ console.log("this is "+title(" AN OTHER TITLE "));
  const text = styl.none(styled);
  console.log("styled=","'"+styled+"'",' length=',text.length);
  ```
+
+
 **available rgb displays are :**
+styl will detect automaticly if your terminal handles true colors.
+You can force rgb type by importing it instead of styl.
 * **types :**
 	* c256 : 256 colors. ```require('node-styl-rgb').c256 ```
 	* c16m : 16M colors. ```require('node-styl-rgb').c16m ```
 
-```javascript
-const { styl } = require('node-styl-rgb');
-```
-is equivalent to
-```javascript
-const { c16m } = require('node-styl-rgb');
-```
 
 **available properties are :**
 
