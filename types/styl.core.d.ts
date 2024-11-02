@@ -44,24 +44,30 @@ export declare class Styl {
      *     Like in this exemple :<code> console.log('2 colors : '+styl('red '+styl('green').green).red);</code>
      * - noContentDecode = true<br/>
      *   - Contents unicode will be ignored.<br/>
-     *     You may expect a faster rendering if your contents contains unicode but it may break the rendered result.<br/>	 */
+     *     You may expect a faster rendering if your contents contains unicode but it may break the rendered result.<br/>
+     */
     constructor(rgbType: rgbType, contents?: string, noContentDecode?: boolean);
     /**
      * Sets front color
-     * @param input standard or custom front rgb color value or number (red channel 0-255) if v2 & v3 are numbers
+     * @param input standard (ex:'red') or custom characters rgb color value (ex:'#f00' or '#ff0000' or [255,0,0] or 0xff0000) or number (red channel 0-255) if v2 & v3 are numbers.
      * @param v2 green channel 0-255
      * @param v3 blue channel 0-255
-     * @returns
+     * @returns styl
      */
     front(input: RgbInputType | null, v2?: number, v3?: number): Styl;
     /**
      * Sets background color
-     * @param input standard or custom background rgb color value or number (red channel 0-255) if v2 & v3 are numbers
+     * @param input standard (ex:'red') or custom background rgb color value (ex:'#f00' or '#ff0000' or [255,0,0] or 0xff0000) or number (red channel 0-255) if v2 & v3 are numbers.
      * @param v2 green channel 0-255
      * @param v3 blue channel 0-255
-     * @returns
+     * @returns styl
      */
     back(input: RgbInputType | null, v2?: number, v3?: number): Styl;
+    /**
+     * sets styles
+     * @param value can be a style name like "bold" or a list of styles like "bold,i,u" or ["bold","i","u"]
+     * @returns
+     */
     style(value: string | string[]): Styl;
     /**
      * Sets a new content

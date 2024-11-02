@@ -102,7 +102,8 @@ var Styl = /** @class */ (function () {
      *     Like in this exemple :<code> console.log('2 colors : '+styl('red '+styl('green').green).red);</code>
      * - noContentDecode = true<br/>
      *   - Contents unicode will be ignored.<br/>
-     *     You may expect a faster rendering if your contents contains unicode but it may break the rendered result.<br/>	 */
+     *     You may expect a faster rendering if your contents contains unicode but it may break the rendered result.<br/>
+     */
     function Styl(rgbType, contents, noContentDecode) {
         if (contents === void 0) { contents = ""; }
         if (noContentDecode === void 0) { noContentDecode = false; }
@@ -112,10 +113,10 @@ var Styl = /** @class */ (function () {
     }
     /**
      * Sets front color
-     * @param input standard or custom front rgb color value or number (red channel 0-255) if v2 & v3 are numbers
+     * @param input standard (ex:'red') or custom characters rgb color value (ex:'#f00' or '#ff0000' or [255,0,0] or 0xff0000) or number (red channel 0-255) if v2 & v3 are numbers.
      * @param v2 green channel 0-255
      * @param v3 blue channel 0-255
-     * @returns
+     * @returns styl
      */
     Styl.prototype.front = function (input, v2, v3) {
         this._io.front(input, v2, v3);
@@ -123,15 +124,20 @@ var Styl = /** @class */ (function () {
     };
     /**
      * Sets background color
-     * @param input standard or custom background rgb color value or number (red channel 0-255) if v2 & v3 are numbers
+     * @param input standard (ex:'red') or custom background rgb color value (ex:'#f00' or '#ff0000' or [255,0,0] or 0xff0000) or number (red channel 0-255) if v2 & v3 are numbers.
      * @param v2 green channel 0-255
      * @param v3 blue channel 0-255
-     * @returns
+     * @returns styl
      */
     Styl.prototype.back = function (input, v2, v3) {
         this._io.back(input, v2, v3);
         return this;
     };
+    /**
+     * sets styles
+     * @param value can be a style name like "bold" or a list of styles like "bold,i,u" or ["bold","i","u"]
+     * @returns
+     */
     Styl.prototype.style = function (value) {
         this._io.style(value);
         return this;
