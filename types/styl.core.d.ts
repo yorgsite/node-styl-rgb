@@ -49,7 +49,9 @@ export declare class Styl {
     constructor(rgbType: rgbType, contents?: string, noContentDecode?: boolean);
     /**
      * Sets front color
-     * @param input standard (ex:'red') or custom characters rgb color value (ex:'#f00' or '#ff0000' or [255,0,0] or 0xff0000) or number (red channel 0-255) if v2 & v3 are numbers.
+     * @param input standard (ex:'red') or custom characters rgb color value
+     * (ex:'#f00' or '#ff0000' or [255,0,0] or 0xff0000)
+     * or number (red channel 0-255) if v2 & v3 are numbers.
      * @param v2 green channel 0-255
      * @param v3 blue channel 0-255
      * @returns styl
@@ -57,7 +59,9 @@ export declare class Styl {
     front(input: RgbInputType | null, v2?: number, v3?: number): Styl;
     /**
      * Sets background color
-     * @param input standard (ex:'red') or custom background rgb color value (ex:'#f00' or '#ff0000' or [255,0,0] or 0xff0000) or number (red channel 0-255) if v2 & v3 are numbers.
+     * @param input standard (ex:'red') or custom background rgb color value
+     * (ex:'#f00' or '#ff0000' or [255,0,0] or 0xff0000)
+     * or number (red channel 0-255) if v2 & v3 are numbers.
      * @param v2 green channel 0-255
      * @param v3 blue channel 0-255
      * @returns styl
@@ -75,7 +79,7 @@ export declare class Styl {
      */
     string(text: string): this;
     /**
-     *
+     * Parses string characters keeping trac of relatve position
      * @param callback
      * @returns
      */
